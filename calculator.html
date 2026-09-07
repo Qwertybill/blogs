@@ -1,0 +1,111 @@
+<!doctype html>
+<head>
+	<title>CALCULATOR</title>
+	<meta name="author" content="Hand coded by Billy Dean" />
+	<meta charset="UTF-8">
+	<meta  name="robots" content="index,follow" />
+	<script>
+	<!-- MHR (X) // -->
+	<!--
+	function ClearForm(form)
+		{
+		    form.rhr.value = "";
+	    	form.mhr.value = "";
+			form.sixtyla.value = "";
+			form.seventyla.value = "";
+			form.seventyha.value = "";
+			form.eightyha.value = "";
+			form.eightyat.value = "";
+			form.ninetyat.value = "";
+			form.ninetyar.value = "";
+			form.hundredar.value = "";
+		}
+		function computeform(form)
+		{
+			var resthr=form.rhr.value;
+			var adjhr=(form.mhr.value-form.rhr.value);
+			form.sixtyla.value=Math.round((adjhr*0.60)+(resthr*1));
+			form.seventyla.value=Math.round((adjhr*0.70)+(resthr*1));
+			form.seventyha.value=Math.round((adjhr*0.70)+(resthr*1));
+			form.eightyha.value=Math.round((adjhr*0.80)+(resthr*1));
+			form.eightyat.value=Math.round((adjhr*0.80)+(resthr*1));
+			form.ninetyat.value=Math.round((adjhr*0.90)+(resthr*1));
+			form.ninetyar.value=Math.round((adjhr*0.90)+(resthr*1));
+			form.hundredar.value=Math.round((adjhr*1.00)+(resthr*1));
+			return;
+		}
+		// -->
+	</script>
+
+</head>
+
+<body style="margin-top:36px; margin-left:50px; margin-right:50px; background-color:#faebd6;">
+
+<Div style="text-align:center;">
+
+<h2>YOUR TARGET HEART RATE CALCULATOR</h2>
+
+<h4 style="text-align:center; margin-left:200px; margin-right:200px;">Plug your MORNING RHR and your DIY MHR into the calculator and click COMPUTE.</h4>
+
+<h5 style="margin-top:-10px; text-align:center; color:#000000;"><span style="color:#cc0000;">THR</span> = <span style="color:#0000cc;">RHR</span> + TL% &#215; (<span style="color:#005050;">MHR</span> &#8212; <span style="color:#0000cc;">RHR</span>)</h5>
+
+<form style="margin-top:20px;" name="THR" method="post">
+
+	<h3>
+		<span style="color:#0000cc;">RHR = </span> <input style="font-size:18px; color:#0000cc; background-color:#d0d0d0; text-align:center; font-weight:bold;" size="2" name="rhr">
+		<img src="images/spacer.gif" height="0" width="20" />
+		<span style="color:#006060;">MHR = </span> <input style="font-size:18px; color:#006060; background-color:#d0d0d0; text-align:center; font-weight:bold;" size="2" name="mhr">
+	</h3>
+
+	<h3>
+		<input style="font-weight:bold;" onclick="computeform(this.form)" type="button" value="COMPUTE">
+		<img src="images/spacer.gif" width="15" height="0" border="0" />
+		<input style="font-weight:bold;" onClick="document.forms[0].reset()" type="button" value="CLEAR">
+	</h3>
+
+	<div style="margin-left:auto; margin-right:auto; width:800px;">
+
+		<table style="font-family:arial; font-size:18px; font-weight:bold; text-align:center;" width="100%" border="1" cellspacing="0">
+
+			<tr>
+				<td style="font-size:20px; background-color:#99ffff; padding:6px;" colspan="4">AEROBIC</td>
+				<td style="font-size:20px; background-color:#ff9999; padding:6px;" colspan="4">ANAEROBIC</td>
+			</tr>
+
+			<tr>
+				<td style="background-color:#ccffcc; padding:6px;" colspan="2">LOW AEROBIC<br />(Cardio Endurance)</td>
+				<td style="background-color:#ccccff; padding:6px;" colspan="2">HIGH AEROBIC<br />(Cardio Efficiency)</td>
+				<td style="background-color:#ffff99;" colspan="2">ANAEROBIC THRESHOLD<br />(Athletic Endurance)</td>
+				<td style="background-color:#ffaa33;" colspan="2">ANAEROBIC REDLINE<br />(Competitive Speed)</td>
+			</tr>
+
+			<tr>
+				<td style="background-color:#ccffcc; padding:6px;">60%</td>
+				<td style="background-color:#ccffcc;">70%</td>
+				<td style="background-color:#ccccff;">70%</td>
+				<td style="background-color:#ccccff;">80%</td>
+				<td style="background-color:#ffff99;">80%</td>
+				<td style="background-color:#ffff99;">90%</td>
+				<td style="background-color:#ffaa33;">90%</td>
+				<td style="background-color:#ffaa33;">100%</td>
+			</tr>
+
+			<tr>
+				<td style="background-color:#ccffcc; padding:6px;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; font-weight:bold; text-align:center;" size="3" name="sixtyla"></td>
+				<td style="background-color:#ccffcc;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="seventyla"></td>
+				<td style="background-color:#ccccff;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="seventyha"></td>
+				<td style="background-color:#ccccff;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="eightyha"></td>
+				<td style="background-color:#ffff99;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="eightyat"></td>
+				<td style="background-color:#ffff99;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="ninetyat"></td>
+				<td style="background-color:#ffaa33;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="ninetyar"></td>
+				<td style="background-color:#ffaa33;"><input style="font-size:18px; color:#cc0000; background-color:#c0c0c0; text-align:center; font-weight:bold;" size="2" name="hundredar"></td>
+			</tr>
+		</table>
+</form>
+</Div>
+
+<br />
+<br />
+
+</body>
+</html>
